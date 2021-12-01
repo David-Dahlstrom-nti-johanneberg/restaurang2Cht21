@@ -1,3 +1,57 @@
 body {
-  background:grey;
+    margin: 0;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 80px 1fr 1fr 80px;
+    grid-template-rows: 80px 1fr 1fr 80px;
+    height: 100vh;
+}
+
+header {
+    grid-column: 2/ span 2;
+    background-color: blue;
+}
+
+nav {
+    grid-column: 1;
+    grid-row: 1;
+    background-color: coral;
+}
+
+#logo {
+    grid-column: 4;
+    grid-row: 1;
+    background-color: darkorange;
+}
+
+#img1 {
+    grid-row: 2;
+    grid-column: 2;
+    background-color: darkgreen;
+}
+
+#a1 {
+    grid-row: 2;
+    grid-column: 3;
+    background-color: cyan;
+}
+
+#a2 {
+    grid-column: 2;
+    grid-row: 3;
+    background-color: deeppink;
+}
+
+#img2 {
+    grid-column: 3;
+    grid-row: 3;
+    background-color: firebrick;
+}
+
+footer {
+    grid-column: 1 /span 4;
+    grid-row: 4;
+    background-color: fuchsia;
 }
