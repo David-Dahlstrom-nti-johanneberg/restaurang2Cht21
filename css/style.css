@@ -1,57 +1,75 @@
 body {
     margin: 0;
+    background-color: #011638;
+    color: white;
 }
 
 #container {
     display: grid;
     grid-template-columns: 80px 1fr 1fr 80px;
-    grid-template-rows: 80px 1fr 1fr 80px;
+    grid-template-rows: 80px 40% 40% 60px;
     height: 100vh;
+    grid-gap: 20px;
 }
 
 header {
     grid-column: 2/ span 2;
-    background-color: blue;
 }
 
 nav {
-    grid-column: 1;
+    grid-column: 4;
     grid-row: 1;
-    background-color: coral;
+    background-image: url("../img/navicon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #logo {
-    grid-column: 4;
+    grid-column: 1;
     grid-row: 1;
-    background-color: darkorange;
+    background-image: url("../img/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #img1 {
     grid-row: 2;
     grid-column: 2;
-    background-color: darkgreen;
-}
-
-#a1 {
-    grid-row: 2;
-    grid-column: 3;
-    background-color: cyan;
-}
-
-#a2 {
-    grid-column: 2;
-    grid-row: 3;
-    background-color: deeppink;
+    border-radius: 20px;
+    background-image: url("../img/pizz_burger.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #img2 {
     grid-column: 3;
     grid-row: 3;
-    background-color: firebrick;
+    border-radius: 20px;
+    background-image: url("../img/burger_pizza.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#a1 {
+    grid-row: 2;
+    grid-column: 3;
+    background-color: #2E294E;
+    border-radius: 20px;
+}
+
+#a2 {
+    grid-column: 2;
+    grid-row: 3;
+    background-color: #2E294E;
+    border-radius: 20px;
 }
 
 footer {
     grid-column: 1 /span 4;
     grid-row: 4;
-    background-color: fuchsia;
+    background-color: #9055A2;
 }
