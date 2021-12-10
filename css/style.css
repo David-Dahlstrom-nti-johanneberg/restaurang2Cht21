@@ -4,7 +4,7 @@ body {
     color: white;
 }
 
-#container {
+.container {
     display: grid;
     grid-template-columns: 80px 1fr 1fr 80px;
     grid-template-rows: 80px 40% 40% 60px;
@@ -17,20 +17,22 @@ header {
     grid-column: 2/ span 2;
 }
 
-#Mc {
+.Mc {
     color: #f99b07;
 }
 
 nav {
     grid-column: 4;
     grid-row: 1;
-    background-image: url("../img/navicon.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    cursor: pointer;
 }
 
-#logo {
+.nav .navmeny {
+    visibility: hidden;
+    background-color: #535353;
+}
+
+.logo {
     grid-column: 1;
     grid-row: 1;
     background-image: url("../img/logoorange.png");
@@ -76,5 +78,22 @@ nav {
 footer {
     grid-column: 1 /span 4;
     grid-row: 4;
+}
+
+.kontakt {
+    color: #f99b07;
+}
+
+::-webkit-scrollbar {
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(37, 37, 37);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
     background-color: #535353;
+    border-radius: 20px;
 }
