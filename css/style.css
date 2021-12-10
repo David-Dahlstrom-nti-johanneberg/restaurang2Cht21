@@ -1,6 +1,12 @@
+:root {
+    --maincolor: #000000;
+    --secondarycolor: #535353;
+    --accentcolor: #f99b07;
+}
+
 body {
     margin: 0;
-    background-color: black;
+    background-color: var(--maincolor);
     color: white;
 }
 
@@ -18,7 +24,7 @@ header {
 }
 
 .Mc {
-    color: #f99b07;
+    color: var(--accentcolor);
 }
 
 nav {
@@ -29,7 +35,7 @@ nav {
 
 .nav .navmeny {
     visibility: hidden;
-    background-color: #535353;
+    background-color: var(--secondarycolor);
 }
 
 .logo {
@@ -64,14 +70,14 @@ nav {
 #a1 {
     grid-row: 2;
     grid-column: 3;
-    background-color: #535353;
+    background-color: var(--secondarycolor);
     border-radius: 20px;
 }
 
 #a2 {
     grid-column: 2;
     grid-row: 3;
-    background-color: #535353;
+    background-color: var(--secondarycolor);
     border-radius: 20px;
 }
 
@@ -81,7 +87,7 @@ footer {
 }
 
 .kontakt {
-    color: #f99b07;
+    color: var(--accentcolor);
 }
 
 ::-webkit-scrollbar {
@@ -94,6 +100,6 @@ footer {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #535353;
+    background-color: var(--secondarycolor);
     border-radius: 20px;
 }
