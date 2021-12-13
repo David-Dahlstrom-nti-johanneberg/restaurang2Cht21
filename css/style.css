@@ -1,6 +1,7 @@
 :root {
     --maincolor: #000000;
     --secondarycolor: #535353;
+    --secondarycolorlight: #7e7d7d;
     --accentcolor: #FF9B00;
 }
 
@@ -15,15 +16,33 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 80px 1fr 1fr 80px;
-    grid-template-rows: 80px 40% 40% 60px;
+    grid-template-rows: 80px calc(100vh - 80px) 60px;
     height: 100vh;
-    grid-gap: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.header-container {
+    grid-row: 1;
+    width: auto;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 80 auto 80;
+}
+
+main {
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+}
+
+.footercontainer {
+    grid-row: 3;
+}
+
 header {
-    grid-column: 2/ span 2;
+    grid-column: 2;
+    background-color: var(--secondarycolor);
 }
 
 .Mc {
@@ -31,60 +50,53 @@ header {
 }
 
 .navmeny {
-    background-color: var(--maincolor);
-    color: white;
-    padding: 16px;
-    font-size: 16px;
+    background-color: var(--secondarycolor);
     border: none;
     cursor: pointer;
 }
 
 nav {
-    grid-column: 4;
-    grid-row: 1;
+    grid-column: 3;
+    background-color: blue;
     display: inline-block;
 }
 
 .navmeny-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: var(--secondarycolor);
     min-width: 80px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
 .navmeny-content a {
-    color: black;
+    color: white;
     padding: 6px 8px;
     text-decoration: none;
     display: block;
 }
 
 .navmeny-content a:hover {
-    background-color: var(--secondarycolor);
+    background-color: var(--secondarycolorlight);
 }
 
-.nav:hover .navmeny-content {
+nav:hover .navmeny-content {
     display: block;
-}
-
-.nav:hover .navmeny {
-    background-color: #3e8e41;
 }
 
 .logo {
     grid-column: 1;
-    grid-row: 1;
     background-image: url("../img/logoorange.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    background-color: pink;
 }
 
 #img1 {
-    grid-row: 2;
-    grid-column: 2;
+    grid-row: 1;
+    grid-column: 1;
     border-radius: 20px;
     background-image: url("../img/pizz_burger.jpg");
     background-size: cover;
@@ -93,8 +105,8 @@ nav {
 }
 
 #img2 {
-    grid-column: 3;
-    grid-row: 3;
+    grid-column: 2;
+    grid-row: 2;
     border-radius: 20px;
     background-image: url("../img/burger_pizza.jpg");
     background-size: cover;
@@ -104,22 +116,19 @@ nav {
 
 #a1 {
     grid-row: 2;
-    grid-column: 3;
+    grid-column: 1;
     background-color: var(--secondarycolor);
     border-radius: 20px;
 }
 
 #a2 {
-    grid-column: 2;
-    grid-row: 3;
+    grid-column: 1;
+    grid-row: 2;
     background-color: var(--secondarycolor);
     border-radius: 20px;
 }
 
-footer {
-    grid-column: 1 /span 4;
-    grid-row: 4;
-}
+footer {}
 
 .kontakt {
     color: var(--accentcolor);
