@@ -1,8 +1,11 @@
 :root {
     --maincolor: #000000;
     --secondarycolor: #535353;
-    --accentcolor: #f99b07;
+    --accentcolor: #FF9B00;
 }
+
+
+/* #f99b07*/
 
 body {
     margin: 0;
@@ -27,15 +30,47 @@ header {
     color: var(--accentcolor);
 }
 
-nav {
-    grid-column: 4;
-    grid-row: 1;
+.navmeny {
+    background-color: var(--maincolor);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
     cursor: pointer;
 }
 
-.nav .navmeny {
-    visibility: hidden;
+nav {
+    grid-column: 4;
+    grid-row: 1;
+    display: inline-block;
+}
+
+.navmeny-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 80px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.navmeny-content a {
+    color: black;
+    padding: 6px 8px;
+    text-decoration: none;
+    display: block;
+}
+
+.navmeny-content a:hover {
     background-color: var(--secondarycolor);
+}
+
+.nav:hover .navmeny-content {
+    display: block;
+}
+
+.nav:hover .navmeny {
+    background-color: #3e8e41;
 }
 
 .logo {
