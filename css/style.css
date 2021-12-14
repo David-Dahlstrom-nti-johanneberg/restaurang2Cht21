@@ -1,6 +1,5 @@
 :root {
     --maincolor: #000000;
-    --shadow: #0000006b;
     --secondarycolor: #535353;
     --secondarycolorlight: #7e7d7d;
     --accentcolor: #FF9B00;
@@ -33,7 +32,17 @@ main {
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
     grid-gap: 20px;
-    padding: 20px 80px
+    margin: 20px 80px
+}
+
+#meny {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-style: groove;
+    border-color: white;
+    margin: 20px;
 }
 
 .footercontainer {
@@ -124,6 +133,22 @@ nav:hover .navmeny-content {
     grid-column: 1;
     background-color: var(--secondarycolor);
     border-radius: 20px;
+}
+
+#top-con {
+    order: 1;
+}
+
+#piz-con {
+    order: 2;
+}
+
+#bur-con {
+    order: 3;
+}
+
+#bar-con {
+    order: 4;
 }
 
 section {
