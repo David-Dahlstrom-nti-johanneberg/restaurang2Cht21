@@ -171,7 +171,7 @@ nav:hover {
     order: 4;
 }
 
-section {
+.intesection {
     display: inline-block;
     border-radius: 20px;
     background-size: cover;
