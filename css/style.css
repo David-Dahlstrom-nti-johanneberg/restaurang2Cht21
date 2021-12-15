@@ -42,7 +42,7 @@ main {
     flex-wrap: wrap;
     border-style: groove;
     border-color: white;
-    margin: 20px;
+    margin: 20px 25%;
 }
 
 .footercontainer {
@@ -174,7 +174,7 @@ section {
 #jakob {
     grid-row: 2;
     grid-column: 1;
-    background-image: url("../img/jakobkock.JPG");
+    background-image: url("../img/Jakob.jpg");
 }
 
 #jag {
@@ -211,7 +211,7 @@ section {
 }
 
 #jakob:hover {
-    background-image: url("../img/shadowxD.png"), url("../img/jakobkock.JPG");
+    background-image: url("../img/shadowxD.png"), url("../img/Jakob.jpg");
 }
 
 #jag:hover #a-jag {
